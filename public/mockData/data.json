@@ -1,0 +1,35 @@
+{
+  "dashboardTitle": "CI/CD Pipeline Dashboard",
+  "charts": {
+    "statusDistribution": {
+      "title": "Status Distribution",
+      "type": "donut",
+      "data": [
+        { "label": "Queued", "value": 42 },
+        { "label": "Running", "value": 68 },
+        { "label": "Success", "value": 85 },
+        { "label": "Failed", "value": 37 }
+      ]
+    },
+    "categoryDistribution": {
+      "title": "Category Distribution",
+      "type": "donut",
+      "data": [
+        { "label": "Frontend Build", "value": 52 },
+        { "label": "Backend Build", "value": 48 },
+        { "label": "Deployment", "value": 73 },
+        { "label": "Test Automation", "value": 59 }
+      ]
+    }
+  },
+  "table": {
+    "columns": ["Job ID", "Title", "Category", "Status", "Last Run", "Duration (min)", "Triggered By"],
+    "rows": [
+      { "Job ID": "JOB-001", "Title": "Build React App", "Category": "Frontend Build", "Status": "Success", "Last Run": "2025-11-10", "Duration (min)": 7, "Triggered By": "Auto Schedule" },
+      { "Job ID": "JOB-002", "Title": "Run API Tests", "Category": "Test Automation", "Status": "Failed", "Last Run": "2025-11-09", "Duration (min)": 12, "Triggered By": "Commit Push" },
+      { "Job ID": "JOB-003", "Title": "Deploy to Staging", "Category": "Deployment", "Status": "Running", "Last Run": "2025-11-10", "Duration (min)": 5, "Triggered By": "Jenkinsfile" },
+      { "Job ID": "JOB-004", "Title": "Build API Server", "Category": "Backend Build", "Status": "Queued", "Last Run": "2025-11-10", "Duration (min)": 0, "Triggered By": "Manual" },
+      { "Job ID": "JOB-005", "Title": "Deploy to Production", "Category": "Deployment", "Status": "Success", "Last Run": "2025-11-08", "Duration (min)": 8, "Triggered By": "Manual" }
+    ]
+  }
+}
